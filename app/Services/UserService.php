@@ -19,6 +19,10 @@ class UserService {
        return  $this->repository::withoutGlobalScopes([AgeUser::class])->get();
     }
 
+    public function show(int $id)
+    {
+        return $this->repository::withoutGlobalScopes([AgeUser::class])->find($id);
+    }
 
     public function moreThanTwenty()
     {
