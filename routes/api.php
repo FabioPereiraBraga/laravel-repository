@@ -17,4 +17,6 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 
-Route::resource('user', 'UserController');
+Route::resource('user', 'UserController',['except'=>['create', 'edit']]);
+Route::get('search_higher', 'UserController@searchHigherTwenty');
+Route::get('search_twelve','UserController@searchEqualTwelve');
